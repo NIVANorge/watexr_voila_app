@@ -4,12 +4,12 @@ Creating seasonal forecasts of weather and water quality for Lake Vansjø (Vanem
 
 Forecasts are produced for the following variables:
 
- * Precipitation
- * Temperature
- * Total phosphorus
- * Chlorophyll-a
- * Colour
- * Cyanobacteria
+ * Precipitation (mm)
+ * Temperature (°C)
+ * Mean total phosphorus (mg/l)
+ * Mean chlorophyll-a (mg/l)
+ * Mean water colour (mgPt/l
+ * Maximum cyanobacteria (mm³/l)
  
 Predictions for the weather/climate variables are based on [SEAS5](https://gmd.copernicus.org/articles/12/1087/2019/) data from the [European Centre for Medium-Range Weather Forecasts (ECMWF)](https://www.ecmwf.int/); water quality forecasts are based on a Bayesian network developed as part of the WateXr project.
  
