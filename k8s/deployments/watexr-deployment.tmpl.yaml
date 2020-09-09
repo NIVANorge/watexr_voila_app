@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watexr
+  labels:
+    app: watexr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watexr
+  template:
+    metadata:
+      labels:
+        app: watexr
+    spec:
+      containers:
+      - name: watexr
+        image: WATEXR_IMAGENAME
+        ports:
+          - containerPort: 8866
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8866
+          initialDelaySeconds: 3
+          periodSeconds: 10
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8866
+          periodSeconds: 10
+---
+# Service exposing the timescale DB
+apiVersion: v1
+kind: Service
+metadata:
+  name: watexr
+  annotations:
+    cloud.google.com/load-balancer-type: "Internal"
+spec:
+  ports:
+  - port: 8866
+    protocol: TCP
+  selector:
+    app: watexr
