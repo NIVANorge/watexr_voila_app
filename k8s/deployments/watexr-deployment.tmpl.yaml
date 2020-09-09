@@ -17,6 +17,9 @@ spec:
       containers:
       - name: watexr
         image: WATEXR_IMAGENAME
+        resources:
+          requests:
+            memory: 512Mi
         ports:
           - containerPort: 8866
         livenessProbe:
