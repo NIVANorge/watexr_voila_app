@@ -24,14 +24,14 @@ spec:
           - containerPort: 8866
         livenessProbe:
           httpGet:
-            path: /
+            path: /voila/static/main.js
             port: 8866
           initialDelaySeconds: 3
           periodSeconds: 10
           timeoutSeconds: 5
         readinessProbe:
           httpGet:
-            path: /
+            path: /voila/static/main.js
             port: 8866
           periodSeconds: 10
 ---
