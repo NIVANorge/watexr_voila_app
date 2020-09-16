@@ -1,21 +1,17 @@
 # WateXr: Seasonal forecasting for Lake Vansjø
 
-Creating seasonal forecasts of weather and water quality for Lake Vansjø (Vanemfjorden) near Moss. Part of the [WateXr](https://watexr.eu/) project.
+Creating seasonal forecasts of water quality for Lake Vansjø (Vanemfjorden) near Moss. Part of the [WateXr](https://watexr.eu/) project.
 
 Forecasts are produced for the following variables:
 
- * Precipitation (mm)
- * Temperature (°C)
- * Mean total phosphorus (mg/l)
- * Mean chlorophyll-a (mg/l)
- * Mean water colour (mgPt/l
- * Maximum cyanobacteria (mm³/l)
+ * Mean total phosphorus concentration (mg/l)
+ * Mean chlorophyll-a concentration (mg/l)
+ * Mean water colour concentration (mgPt/l
+ * Maximum cyanobacteria concentration (mg/l)
  
-Predictions for the weather/climate variables are based on [SEAS5](https://gmd.copernicus.org/articles/12/1087/2019/) data from the [European Centre for Medium-Range Weather Forecasts (ECMWF)](https://www.ecmwf.int/); water quality forecasts are based on a Bayesian network developed as part of the WateXr project.
+Forecasts are based on a Bayesian network developed as part of the WateXr project, while the app itself uses [Voilà](https://github.com/voila-dashboards/voila) and Jupyter notebooks.
  
-The app itself uses [Voilà](https://github.com/voila-dashboards/voila) and Jupyter notebooks.
- 
-**Note:** Evaluation of the latest SEAS5 predictions for Lake Vansjø indicates the weather models have little/no significant skill in this region. The precipitation and temperature forecasts should therefore **not** be used for operational decision making.
+**Note:** The original intention was to include seasonal climate variables based on [SEAS5](https://gmd.copernicus.org/articles/12/1087/2019/) data from the [European Centre for Medium-Range Weather Forecasts (ECMWF)](https://www.ecmwf.int/). However, evaluation of these predictions indicates the weather models have little/no significant skill in this region. The precipitation and temperature forecasts have therefore been omitted for the present.
 
 ## Running the test app in Docker
 
