@@ -1,0 +1,7 @@
+version: '3.5'
+
+services:
+  watexr:
+    build: "."
+    ports:
+      - 8866:8866

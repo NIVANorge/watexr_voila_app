@@ -6,14 +6,16 @@ LABEL maintainer="James Sample <james.sample@niva.no>"
 USER root
 
 COPY requirements.txt /tmp/
-RUN conda install -c conda-forge --quiet --yes --file /tmp/requirements.txt && \
+RUN conda install -c conda-forge --quiet --yes mamba
+RUN mamba install -c conda-forge --override-channels --quiet --yes --file /tmp/requirements.txt && \
     conda clean --all -f -y && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER && \
     rm -rf /tmp/*
 
 COPY app /app/
+RUN fix-permissions /app
 
 USER $NB_UID
 
-CMD ["voila", "/app/voila_test.ipynb", "--port", "8866", "--no-browser"] 
+CMD ["voila", "/app/voila_app.ipynb", "--port", "8866", "--no-browser"] 

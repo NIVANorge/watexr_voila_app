@@ -1,0 +1,10 @@
+{
+  "containers": {
+    "watexr": {
+      "image_name": "WATEXR_IMAGENAME",
+      "docker_file_directory": ".",
+      "kubectl_deployment_directories": "k8s/deployments/",
+      "is_changed_regexp": "."
+    }
+  }
+}
