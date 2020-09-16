@@ -1,5 +1,10 @@
 ipympl
 ipywidgets
 matplotlib
+numpy
 pandas
+r-bnlearn
+r-tidyverse
+rpy2
+scipy
 voila

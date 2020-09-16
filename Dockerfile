@@ -16,4 +16,4 @@ COPY app /app/
 
 USER $NB_UID
 
-CMD ["voila", "/app/voila_test.ipynb", "--port", "8866", "--no-browser"] 
+CMD ["voila", "/app/voila_app.ipynb", "--port", "8866", "--no-browser"] 
