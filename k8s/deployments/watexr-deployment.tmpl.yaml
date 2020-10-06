@@ -14,6 +14,15 @@ spec:
       labels:
         app: watexr
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: cloud.google.com/gke-preemptible
+                    operator: NotIn
+                    values:
+                      - 'true'
       containers:
       - name: watexr
         image: WATEXR_IMAGENAME
