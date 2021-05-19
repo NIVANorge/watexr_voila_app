@@ -44,13 +44,13 @@ jobs:
       - uses: google-github-actions/setup-gcloud@master
         with:
           version: 'latest'
-          service_account_key: ${{ secrets.NIVATEST_SERVICE_KEY }}
-          project_id: ${{ secrets.NIVATEST_PROJECT_NAME }}
+          service_account_key: ${{ secrets.NIVAPROD_SERVICE_KEY }}
+          project_id: ${{ secrets.NIVAPROD_PROJECT_NAME }}
           export_default_credentials: true
 
       - name: Set kubeconfig
         run: |-
-          gcloud container clusters get-credentials "${{ secrets.NIVATEST_CLUSTER_NAME }}" --zone ${{ secrets.GCLOUD_COMPUTE_ZONE }}
+          gcloud container clusters get-credentials "${{ secrets.NIVAPROD_CLUSTER_NAME }}" --zone ${{ secrets.GCLOUD_COMPUTE_ZONE }}
 
       - name: Deploy
         run: |-
