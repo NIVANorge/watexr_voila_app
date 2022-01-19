@@ -146,7 +146,7 @@ def get_obs_chem_prev_summer(year):
 
     if df.index.max() < (year - 1):
         raise ChemistryDataError(
-            f"Historic water chemistry data is not yet available for {year - 1}. "
+            f"Historic water chemistry data are not yet available for {year - 1}. "
             "Please update 'seasonal_obs_vanemfjorden.xlsx'."
         )
 
