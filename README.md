@@ -1,6 +1,6 @@
-# WateXr: Seasonal forecasting for Lake Vansjø
+# WATExR: Seasonal forecasting for Lake Vansjø, south-eastern Norway
 
-Creating seasonal forecasts of water quality for Lake Vansjø (Vanemfjorden) near Moss. Part of the [WateXr](https://watexr.eu/) project.
+Creating seasonal forecasts of water quality for Lake Vansjø (Vanemfjorden) near Moss in south-eastern Norway. Part of the [WATExR](https://nivanorge.github.io/seasonal_forecasting_watexr/) project.
 
 Forecasts are produced for the following variables:
 
@@ -9,7 +9,7 @@ Forecasts are produced for the following variables:
  * Mean water colour concentration (mgPt/l
  * Maximum cyanobacteria concentration (mg/l)
  
-Forecasts are based on a Bayesian network developed as part of the WateXr project, while the app itself uses [Voilà](https://github.com/voila-dashboards/voila) and Jupyter notebooks.
+Forecasts are based on a Bayesian network developed as part of the WATExR project, while the app itself uses [Voilà](https://github.com/voila-dashboards/voila) and Jupyter notebooks.
  
 **Note:** The original intention was to include seasonal climate variables based on [SEAS5](https://gmd.copernicus.org/articles/12/1087/2019/) data from the [European Centre for Medium-Range Weather Forecasts (ECMWF)](https://www.ecmwf.int/). However, evaluation of these predictions indicates the weather models have little/no significant skill in this region. The precipitation and temperature forecasts have therefore been omitted for the present.
 
